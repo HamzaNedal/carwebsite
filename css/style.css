@@ -1,0 +1,716 @@
+@font-face {
+    font-family: "A Jannat LT";
+    src: url("../fonts/A\ Jannat\ LT.ttf")
+}
+
+* {
+    font-family: "A Jannat LT";
+    padding: 0;
+    margin: 0;
+    direction: rtl;
+}
+
+
+.navbar {
+    font-size: 18px;
+    background-color: rgb(255, 255, 255) !important;
+    position: relative;
+    padding-top: 0;
+    padding: 1em 4em 1em 1em;
+}
+
+
+
+.navbar-brand .logo {
+    margin-left: 35px;
+}
+
+.header .active {
+    background-color: rgb(40, 102, 189);
+}
+
+.header .active a {
+    color: white !important;
+
+}
+
+.navbar-nav {
+    margin-top: -7%;
+}
+
+.leftsidebar {
+    position: relative;
+    right: 3%;
+}
+
+.socailmedia {
+    margin-right: 85px;
+    font-size: 20px;
+}
+
+.socailmedia .nav-link {
+    padding: .5rem 0.5rem !important;
+}
+
+.header .nav-item {
+    padding-top: 118px;
+    margin-top: 10px;
+}
+
+.section2 {
+    
+    width: 100%;
+    height: 1357px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.edit-part1{
+    background-image: url("../images/background_car.png");
+    height: 1357px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.part1 .row {
+    padding: 28px;
+
+}
+.part1 .photos{
+    position: absolute;
+    left: -340px;
+    top: 60%;
+}
+.part1 .photos .image{
+    width: 210px;
+    height: 160px;
+}
+.section2  .part1 {
+    background-color: white;
+    max-width: 1208px !important;
+    height: auto;
+    position: relative;
+    top: 4%;
+}
+
+.part1 .title {
+    font-size: 30px;
+    color: rgb(44, 70, 133);
+    font-weight: bold;
+    line-height: 2;
+    text-align: right;
+}
+
+.date {
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    line-height: 1.685;
+    text-align: right;
+}
+
+.section6 .date >i,
+.section5 .date >i,
+.section3 .date >i,
+.section4 .date >i,
+.section8 .date >i {
+    color: white;
+    background-color: rgb(40, 102, 189);
+}
+
+.section6 .date,
+.section5 .date,
+.section3 .date,
+.section4 .date,
+.section8 .date {
+    color: white;
+}
+
+.part1 .paragraph {
+    font-size: 15px;
+    color: rgb(86, 86, 86);
+    line-height: 1.669;
+    text-align: justify;
+
+}
+
+.part1 .col-md-4 {
+    margin-top: 10%;
+}
+
+.part1 .img {
+    width: 100%;
+}
+.news{
+    margin-top: -600px;
+}
+
+.news .title {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 2.198;
+    text-align: right;
+    margin-top: 6%;
+    text-align: center;
+}
+
+.news .nav-link {
+    color: rgb(255, 255, 255);
+}
+
+.news .active {
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.news .container {
+    margin-top: 30px;
+
+}
+
+.news .row div {
+    margin-bottom: 5px;
+
+}
+
+.news .card>.category {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    border: 1px solid #ff5e00;
+    background-color: #ff5e00;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.news .card .card-title {
+    color: blue;
+}
+
+.news .card {
+    box-shadow: 0px 9px 7px #c7c7c7;
+    border: none !important;
+
+}
+
+.news .card .arrow {
+    float: left !important;
+    margin-top: -30px;
+    margin-bottom: -10px;
+}
+
+.news .card .card-text {
+    text-align: justify;
+}
+
+.more-details {
+    position: relative;
+    right: 46%;
+    bottom: 75px;
+}
+
+.section3 {
+    background-color: #f8f8f8;
+}
+
+/* .imgSlider {
+    width: 357px !important;
+    height: 274px !important;
+} */
+
+.sliderOwlOne {
+    color: white;
+    background-image: url("../images/blue_car.png");
+    width: 399px !important;
+    height: 284px !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 180px;
+    padding-right: 15px;
+    padding-bottom: 100px;
+
+}
+
+.sliderOwlOne .date i {
+    background-color: blue;
+    color: white;
+    padding: 2px;
+}
+.section3 .owl-prev,.section3 .owl-next{
+    position: absolute;
+    font-size: 80px !important;
+    height: 60px !important;
+    width: 55px !important;
+    top: 160px !important;
+    background-color: #0404d3 !important;
+
+    color: white !important;
+}
+.section3 .owl-prev{
+    right: 0 !important;
+}
+.section3 .owl-next{
+    left: 0 !important;
+}
+.section3 .owl-prev span,.section3 .owl-next span{
+    position: relative !important;
+    top: -38px !important;
+    height: 60px !important;
+    width: 100px !important;
+}
+.section3 .owl-carousel {
+    padding: 50px;
+    padding-right: 0px;
+    padding-left: 0px;
+
+}
+
+.section3 .arrow {
+    float: left !important;
+    color: white;
+    margin-top: -27px;
+
+}
+
+.section4 {
+    padding: 50px;
+}
+
+.priceCars {
+    width: 142px;
+    height: 347px;
+    border: 5px solid rgb(40, 102, 189);
+    text-align: center;
+    color: rgb(40, 102, 189);
+}
+
+.priceCars h2 {
+    font-size: 34px;
+    margin-top: 86px;
+    margin-bottom: 52px;
+    line-height: 2;
+    font-weight: bold;
+}
+
+.priceCars a {
+    font-size: 16px;
+}
+
+.priceCars a i {
+    padding-right: 45px;
+}
+
+/* .carSection4 {
+    font-weight: none;
+    background-color: #2866bd;
+    color: white;
+
+} */
+
+.news-1 {
+    /* padding: 0; */
+    background-color: #2866bd;
+    color: white;
+    margin-top: 26px;
+}
+
+.news-1 .date {
+    line-height: 2.685;
+
+}
+
+/* .carSection4>div>img {
+    width: 100%;
+    height: auto;
+} */
+/* 
+.carSection4>div:last-child {
+    padding: 15px;
+} */
+
+.card-section4 .card {
+    border: none;
+    background-color: #2866bd;
+    color: white;
+    margin-top: 4px;
+}
+
+.section5 {
+    background-color: #f8f8f8;
+    position: relative;
+    margin-bottom: 50px;
+
+}
+
+.section5 .item {
+    position: relative;
+    bottom: -40px;
+}
+
+.section5::before {
+    content: "";
+    background-color: #f2f2f2;
+    width: 30%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.section5 .title {
+    font-size: 44px;
+    color: rgb(40, 102, 189);
+    font-weight: bold;
+    line-height: 1.613;
+    text-align: end;
+    width: 130px;
+    margin: auto;
+
+}
+
+.socila {
+    position: relative;
+    margin-right: 60px;
+}
+
+.socila img {
+    width: 210px;
+}
+
+.follow {
+    font-size: 44px;
+    color: rgb(40, 102, 189);
+    font-weight: bold;
+    line-height: 1.613;
+    background-color: #f2f2f2;
+    width: 490px;
+    text-align: center;
+    padding: 10px;
+    padding-right: 234px;
+}
+
+.follow-event,
+.follow-event2,
+.follow-event3 {
+    position: absolute;
+    top: 22%;
+
+}
+
+.follow-event {
+    left: 45%;
+}
+
+.follow-event2 {
+    left: 25%;
+}
+
+.follow-event3 {
+    left: 5%;
+}
+
+.follow-btn {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    left: 50px;
+    background: none;
+    border-color: white;
+    color: white;
+}
+
+.section6 {
+    background-image: url(../images/backgroud_blue.png);
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 100px;
+}
+
+.section6 .news-1 {
+    background-color: #00419d !important;
+}
+
+.section6 .title,
+.paragraph {
+    color: white;
+
+}
+
+.section6 .container {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.section7 .title {
+    text-align: center;
+    color: #2866bd;
+}
+
+.section7 .paragraph {
+    width: 510px;
+    text-align: justify;
+    color: #000;
+}
+
+.section7 .container {
+    text-align: -webkit-center;
+}
+
+.section7 .style-1 .date,
+.section7 .style-2 .date {
+    position: relative;
+    top: -60px;
+    color: white;
+    text-align: center;
+    background-color: #ffffff2e;
+    width: 120px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.section7 .style-1 img,
+.section7 .style-2 img {
+    width: 100%;
+}
+
+.section7 .style-1 a {
+    position: absolute;
+    top: 35%;
+    right: 35%;
+    width: 70px;
+    font-size: 40px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.section7 .style-1 .paly {
+    position: relative;
+    top: 5px;
+    left: 2px;
+}
+
+.section7 .more-details {
+    margin-top: 100px;
+
+}
+
+.section8 {
+    background-color: rgb(40, 102, 189);
+    height: 600px;
+}
+
+.section8 .container {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.section8 .card {
+  color: white;
+  background-color: unset;
+  border: none;
+}
+.section8 .arrow{
+    float: left;
+    position: relative;
+    color: white;
+    top: -25px;
+}
+.section8 .card-text{
+    font-size: 13px;
+}
+.section8 h2 {
+    margin-bottom: 60px;
+    color: white;
+    font-weight: bold;
+
+}
+.section8  .owl-theme .owl-nav{
+    margin-top: 10px;
+    position: absolute;
+    top: -90px;
+    left: 0px;
+    font-size: 50px;
+}
+.section8  .owl-prev,.section8  .owl-next{
+    background-color: blue !important;
+    border-radius: 50% !important;
+    width: 60px !important;
+    height: 60px !important;
+    color: white !important;
+    position: relative !important;
+}
+.section8  .owl-prev span,.section8  .owl-next span{
+    position: relative !important;
+    top: -10px !important;
+}
+.footer .active {
+    background-color:unset;
+    
+}
+.footer .active a{
+    color: blue !important;
+}
+.footer .nav-item {
+    padding-top: 77px !important;
+}
+@media screen and (max-width : 1100px) {
+    .navbar{
+        font-size: 15px !important;
+        padding: 0em 4em 0em 1em !important;
+    }
+    .socailmedia {
+        margin-right: 0px;
+    }
+    .photos{
+        display: none;
+    }
+}
+@media screen and (max-width: 990px) {
+    .navbar-brand .logo {
+        width: 80px !important;
+        height: auto;
+        top: 14px;
+    }
+
+    .navbar {
+        padding: 1em 1em 1em 0em !important;
+    }
+
+    .navbar-nav {
+        margin-top: 3%;
+    }
+
+    .header .nav-item {
+        padding-top: 0 !important;
+        margin-top: 0;
+    }
+
+    .socailmedia {
+        margin-right: 235px;
+        font-size: 20px;
+        margin-bottom: -7%;
+    }
+
+    .card-section4 {
+        margin-top: 2px;
+    }
+
+    .priceCars {
+        width: auto;
+        height: auto;
+        border: 5px solid rgb(40, 102, 189);
+        text-align: right;
+        color: rgb(40, 102, 189);
+        padding: 13px !important;
+    }
+
+    .priceCars h2 {
+        font-size: 34px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        line-height: 2;
+        font-weight: bold;
+    }
+
+    .priceCars a {
+        float: left;
+        margin-top: -44px;
+    }
+
+    .follow-event3 {
+        left: 10%;
+        top: 36em;
+    }
+
+    .follow-event2 {
+        left: 10%;
+        top: 21em;
+    }
+
+    .follow-event {
+        left: 10%;
+        top: 6em;
+    }
+
+    .follow {
+        padding-right: 0px;
+        width: 100%;
+    }
+
+    .section5 .title {
+        width: auto;
+        text-align: center;
+    }
+
+    .section5::before {
+        opacity: 0;
+    }
+
+    .socila {
+        margin-top: 15px;
+    }
+    
+    .more-details {
+        right: 40%;
+    }
+    .part1 .col-md-4 {
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .news .title {
+        margin-top: 15%;
+    }
+    .socailmedia {
+        margin-bottom: -9%;
+    }
+
+    .news-1 .date {
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+
+    .priceCars h2 {
+        font-size: 20px;
+    }
+
+    .section7 .paragraph {
+        width: 270px;
+        text-align: justify;
+    }
+    .section7 .style-1 a {
+        width: 100px;
+        height: 100px;
+    }
+    .section7 .style-1 .paly {
+        top: 20px;
+    }
+   
+    .news {
+        margin-top: -530px;
+    }
+    .more-details {
+        right: 26%;
+    }
+    .priceCars a {
+        margin-top: -37px;
+    }
+    .priceCars a i {
+        padding-right: 10px;
+    }
+    .section4 .news-1 img{
+        width: 100px;
+        height: 140px;
+    }
+    .section4 .news-1 .media-body{
+        text-align: right;
+        margin-bottom: -10px;
+    }
+
+}

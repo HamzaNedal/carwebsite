@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car</title>
+    <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class="header navbar navbar-expand-lg navbar-light bg-light">
+        <a href="index.html" class="navbar-brand">
+            <svg class="logo d-inline-block align-top" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="131" height="54" viewBox="0 0 131 54">
+                <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="131" height="54"
+                    xlink:href="data:img/png;base64,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" />
+            </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a href="" class="nav-link ">الرئيسية</a></li>
+                <li class="nav-item "><a href="" class="nav-link">أخبار السيارات</a></li>
+                <li class="nav-item"><a href="" class="nav-link">أسعار السيارات</a></li>
+                <li class="nav-item"><a href="" class="nav-link">العناية بالسيارة</a></li>
+                <li class="nav-item"><a href="" class="nav-link">صور السيارات</a></li>
+                <li class="nav-item"><a href="" class="nav-link">مراجعات وتجارب السيارات</a></li>
+                <li class="nav-item"><a href="" class="nav-link">سوق السيارات</a></li>
+            </ul>
+            <div>
+                <div class="col-md-12">
+                    <ul class="nav socailmedia">
+                        <li>
+                            <a class="nav-link" target="_blank" href=""> <i class="fa fa-facebook-square"></i> </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" target="_blank" href=""> <i class="fa fa-instagram"></i> </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" target="_blank" href=""> <i class="fa fa-twitter"></i> </a>
+                        </li>
+                        <li>
+                            <a class="nav-link" target="_blank" href=""> <i class="fa fa-search"></i> </a>
+                        </li>
+                    </ul>
+                    <a class="btn btn-primary" href="#" role="button">بيع سيارتك</a>
+                    <a class="btn btn-warning" href="#" role="button">سيارات للبيع</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="section2">
+            <div class="edit-part1">
+                <div class="part1 container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                            <img src="images/car_section2_1.png" class="img" alt="" srcset="">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <h2 class="title">بي ام دبليو X5 موديل 2019</h2>
+                            <p class="date"><i class="fa fa-calendar" aria-hidden="true" style="color: blue;"></i> 03 Oct 2018
+                            </p>
+                            <p class="paragraph">كشفت شركة بي ام دبليو البافارية العملاقة عن الجيل الرابع الجديد كليا من سيارته
+                                الرائدة في فئة SUV متعددة الإستخدامات، ويحظى الطراز X5 بمكانة مميزة جدا في شركة بي ام دبليو، حيث
+                                أن بي ام دبليو X5 أول SUV على الإطلاق من الألمانية، فقد دخلت شركة بي ام دبليو المنافسة في هذه
+                                الفئة من السيارات للمرة الأولى عام 1999 لتغيير قواعد اللعب، ولكي تأسس عمليا إلى فئة الكروس أوفر
+                                التي تستخدم قاعدة عجلات مدمجة مع الهيكل، واليوم سنتحدث عن السيارة بي ام دبليو X5 موديل 2019 في
+                                هذا المقال. </p>
+                            <a href=""></a>
+            
+                        </div>
+         
+                    </div>
+                    <div class="photos">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img class="image" src="images/car1.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <img class="image" src="images/car2.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <img class="image" src="images/car.png" alt="">
+                            </div>
+            
+                        </div>
+                    </div>
+        
+                </div>
+                
+            </div>
+            
+
+        <div class="news">
+            <div class="title"> اجدد اخبار السيارات</div>
+            <div>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">الكل</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">اخبار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">اسعار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">العناية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">المراجعات</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="category">اسعار السيارات</div>
+                            <img class="card-img-top" src="images/car1_news.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">تويوتا كامري هايبرد 2018</h5>
+                                <p class="card-text"> تعتبر السيارة تويوتا بريوس 2018 احدى السيارات السيدان متوسطة الحجم
+                                    والتي تحتوي على محرك هجين “يجمع ما بين البنزين والمحرك الكهربي” ، وقد وصلت مؤخرا إلى
+                                    المملكة العربية السعودية، وقد وصل فئتان فقط من السيارة، وهما ليميتد وفئة بريميوم ،
+                                    حيث لم تصل فئة ستاندر التي متوفرة في موديل 2017، </p>
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true" style="color: blue;"></i>
+                                    03 Oct 2018 </div>
+                                <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="category">اسعار السيارات</div>
+                            <img class="card-img-top" src="images/car1_news.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">تويوتا كامري هايبرد 2018</h5>
+                                <p class="card-text"> تعتبر السيارة تويوتا بريوس 2018 احدى السيارات السيدان متوسطة الحجم
+                                    والتي تحتوي على محرك هجين “يجمع ما بين البنزين والمحرك الكهربي” ، وقد وصلت مؤخرا إلى
+                                    المملكة العربية السعودية، وقد وصل فئتان فقط من السيارة، وهما ليميتد وفئة بريميوم ،
+                                    حيث لم تصل فئة ستاندر التي متوفرة في موديل 2017، </p>
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true" style="color: blue;"></i>
+                                    03 Oct 2018 </div>
+                                <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="category">اسعار السيارات</div>
+                            <img class="card-img-top" src="images/car1_news.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">تويوتا كامري هايبرد 2018</h5>
+                                <p class="card-text"> تعتبر السيارة تويوتا بريوس 2018 احدى السيارات السيدان متوسطة الحجم
+                                    والتي تحتوي على محرك هجين “يجمع ما بين البنزين والمحرك الكهربي” ، وقد وصلت مؤخرا إلى
+                                    المملكة العربية السعودية، وقد وصل فئتان فقط من السيارة، وهما ليميتد وفئة بريميوم ،
+                                    حيث لم تصل فئة ستاندر التي متوفرة في موديل 2017، </p>
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true" style="color: blue"></i>
+                                    03 Oct 2018 </div>
+                                <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="category">اسعار السيارات</div>
+                            <img class="card-img-top" src="images/car1_news.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">تويوتا كامري هايبرد 2018</h5>
+                                <p class="card-text"> تعتبر السيارة تويوتا بريوس 2018 احدى السيارات السيدان متوسطة الحجم
+                                    والتي تحتوي على محرك هجين “يجمع ما بين البنزين والمحرك الكهربي” ، وقد وصلت مؤخرا إلى
+                                    المملكة العربية السعودية، وقد وصل فئتان فقط من السيارة، وهما ليميتد وفئة بريميوم ،
+                                    حيث لم تصل فئة ستاندر التي متوفرة في موديل 2017، </p>
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true" style="color: blue;"></i>
+                                    03 Oct 2018 </div>
+                                <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="category">اسعار السيارات</div>
+                            <img class="card-img-top" src="images/car1_news.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">تويوتا كامري هايبرد 2018</h5>
+                                <p class="card-text"> تعتبر السيارة تويوتا بريوس 2018 احدى السيارات السيدان متوسطة الحجم
+                                    والتي تحتوي على محرك هجين “يجمع ما بين البنزين والمحرك الكهربي” ، وقد وصلت مؤخرا إلى
+                                    المملكة العربية السعودية، وقد وصل فئتان فقط من السيارة، وهما ليميتد وفئة بريميوم ،
+                                    حيث لم تصل فئة ستاندر التي متوفرة في موديل 2017، </p>
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true" style="color: blue;"></i>
+                                    03 Oct 2018 </div>
+                                <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="category">اسعار السيارات</div>
+                            <img class="card-img-top" src="images/car1_news.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">تويوتا كامري هايبرد 2018</h5>
+                                <p class="card-text"> تعتبر السيارة تويوتا بريوس 2018 احدى السيارات السيدان متوسطة الحجم
+                                    والتي تحتوي على محرك هجين “يجمع ما بين البنزين والمحرك الكهربي” ، وقد وصلت مؤخرا إلى
+                                    المملكة العربية السعودية، وقد وصل فئتان فقط من السيارة، وهما ليميتد وفئة بريميوم ،
+                                    حيث لم تصل فئة ستاندر التي متوفرة في موديل 2017، </p>
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true" style="color: blue"></i>
+                                    03 Oct 2018 </div>
+                                <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <a href="#" class="more-details btn btn-outline-primary">المزيد من المعلومات <i
+                    class="fa fa-long-arrow-left" aria-hidden="true"></i> </a>
+        </div>
+        <div class="section3">
+            <div class="owl-carousel owl-carousel-about owl-theme">
+                <div>
+                    <div class="sliderOwlOne">
+                        <p>تجربة قيادة فيراري بورتوفينو 2018 الجديدة بديلة كالفورنيا تي </p>
+                        <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                        <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="sliderOwlOne">
+                        <p>تجربة قيادة فيراري بورتوفينو 2018 الجديدة بديلة كالفورنيا تي </p>
+                        <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                        <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="sliderOwlOne">
+                        <p>تجربة قيادة فيراري بورتوفينو 2018 الجديدة بديلة كالفورنيا تي </p>
+                        <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                        <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="sliderOwlOne">
+                        <p>تجربة قيادة فيراري بورتوفينو 2018 الجديدة بديلة كالفورنيا تي </p>
+                        <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                        <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="sliderOwlOne">
+                        <p>تجربة قيادة فيراري بورتوفينو 2018 الجديدة بديلة كالفورنيا تي </p>
+                        <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                        <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="sliderOwlOne">
+                        <p>تجربة قيادة فيراري بورتوفينو 2018 الجديدة بديلة كالفورنيا تي </p>
+                        <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                        <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <div class="sliderOwlOne">
+                        <p>تجربة قيادة فيراري بورتوفينو 2018 الجديدة بديلة كالفورنيا تي </p>
+                        <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                        <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <section class="section4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="priceCars">
+                            <h2>اسعار السيارة</h2>
+                            <a href="#" class="arrow btn btn-link">المزيد<i class="fa fa-long-arrow-left"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+
+                        <div class="news-1 media align-items-center">
+                            <figure class="mb-0">
+                                <img src="images/carsection5.png" class="img-fluid" alt="">
+                            </figure>
+                            <div class="media-body p-2">
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                                <p>قبل أن نتعرف على السيارة 19 ، يجب الإشارة إل أن شفي تا ال </p>
+                            </div>
+                        </div>
+                        <div class="news-1 media align-items-center">
+                            <figure class="mb-0">
+                                <img src="images/whiteCarSection4.png" class="img-fluid" alt="">
+                            </figure>
+                            <div class="media-body p-2">
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                                <p>قبل أن نتعرف على السيارة 19 ، يجب الإشارة إل أن شفي تا ال </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 card-section4">
+                        <div class="card ">
+                            <img class="card-img-top" src="images/car1_news.png" alt="Card image cap">
+                            <div class="card-body">
+                                <!-- <h5 class="card-title">تويوتا كامري هايبرد 2018</h5> -->
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                    03 Oct 2018 </div>
+                                <p class="card-text"> تعتبر السيارة تويوتا بريوس 2018 احدى السياراتبنزين وتوفرة في موديل
+                                    2017، </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="title">متابعة حساباتنا</div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div
+                            class="item d-flex justify-content-lg-end justify-content-center align-items-end flex-wrap">
+                            <div class="socila">
+                                <img src="images/full_facebook_background.png" alt="" srcset="">
+                                <a href="#" target="_blank" class="btn btn-outline-primary follow-btn">متابعة</a>
+                            </div>
+                            <div class="socila">
+                                <img src="images/fall_tiwtter_background.png" alt="" srcset="">
+                                <a href="#" target="_blank" class="btn btn-outline-primary follow-btn">متابعة</a>
+                            </div>
+                            <div class="socila">
+                                <img src="images/full_insta_background.png" alt="" srcset="">
+                                <a href="#" target="_blank" class="btn btn-outline-primary follow-btn">متابعة</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <section class="section6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div>
+                            <h2 class="title">العناية بالسيارات</h2>
+                            <p class="paragraph"> قبل أن نتعرف على السيارة 19 ، يجب الإشارة إل أن شفي تا ال تعتبر
+                                السيارة تويوتا بريوس 2018 احدى السياراتبنزين وتوفرة في موديل 2017، </p>
+                        </div>
+                        <div class="news-1 media align-items-center">
+                            <figure class="mb-0">
+                                <img src="images/carsection5.png" class="img-fluid" alt="">
+                            </figure>
+                            <div class="media-body pl-2">
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                                <p>قبل أن نتعرف على السيارة 19 ، يجب الإشارة إل أن شفي تا ال </p>
+                            </div>
+                        </div>
+                        <div class="news-1 media align-items-center">
+                            <figure class="mb-0">
+                                <img src="images/carsection5.png" class="img-fluid" alt="">
+                            </figure>
+                            <div class="media-body pl-2">
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                                <p>قبل أن نتعرف على السيارة 19 ، يجب الإشارة إل أن شفي تا ال </p>
+                            </div>
+                        </div>
+                        <div class="news-1 media align-items-center">
+                            <figure class="mb-0">
+                                <img src="images/carsection5.png" class="img-fluid" alt="">
+                            </figure>
+                            <div class="media-body pl-2">
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                                <p>قبل أن نتعرف على السيارة 19 ، يجب الإشارة إل أن شفي تا ال </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="news-1 media align-items-center">
+
+                            <div class="media-body p-2">
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                                <h3 class="pb-2">رولز رويس كولينان 2019</h3>
+                                <p>قبل أن نتعرف على السيارة 19 ، يجب الإشارة إل أن شفي تا ال </p>
+                            </div>
+                            <figure class="mb-0">
+                                <img src="images/yellow_car.png" class="img-fluid" alt="">
+                            </figure>
+                        </div>
+                        <div class="news-1 media align-items-center">
+                            <figure class="mb-0">
+                                <img src="images/yellow_car.png" class="img-fluid" alt="">
+                            </figure>
+                            <div class="media-body p-2">
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i> 03 Oct 2018 </div>
+                                <h3 class="pb-2">رولز رويس كولينان 2019</h3>
+                                <p>قبل أن نتعرف على السيارة 19 ، يجب الإشارة إل أن شفي تا ال </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section7">
+            <div class="container mt-5 mb-5 pl-5">
+                <h2 class="title">صور وفيديوهات</h2>
+                <p class="paragraph">ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي
+                    منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="style-1 relat">
+                                    <img src="images/yellow_car.png" alt="">
+                                    <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                        03 Oct 2018 </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="style-1 relat">
+                                    <a data-fancybox href="videos/Masterly_Motion_2021.mp4"><i class="fa fa-caret-right paly" aria-hidden="true"></i></a>
+                                    <img src="images/yellow_car.png" alt="">
+                                    <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                        03 Oct 2018 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="style-2">
+                            <img src="images/red_car.png" alt="">
+                            <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                03 Oct 2018 </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="style-2">
+                            <img src="images/red_car.png" alt="">
+                            <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                03 Oct 2018 </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="style-1 relat">
+                                    <a   data-fancybox href="#"><i class="fa fa-caret-right paly" aria-hidden="true"></i></a>
+                                    <img src="images/yellow_car.png" alt="">
+                                    <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                        03 Oct 2018 </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="style-1 relat">
+                                    <img src="images/yellow_car.png" alt="">
+                                    <p class="date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                        03 Oct 2018 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="more-details btn btn-outline-primary">المزيد من الوسائط <i class="fa fa-long-arrow-left"
+                    aria-hidden="true"></i> </a>
+        </section>
+        <section class="section8">
+            <div class="container">
+                <h2>مراجعات وتجارب</h2>
+                <div class="owl-carousel owl-carousel-exp owl-theme">
+                    <div>
+                        <div class="card">
+
+                            <img class="card-img-top" src="images/car1_news.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">تويوتا كامري هايبرد 2018</h5>
+                                <p class="card-text"> تعتبر السيارة تويوتا بريوس 2018 احدى السيارات السيد بين البنزين و
+                                    2017، </p>
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                    03 Oct 2018 </div>
+                                <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div>
+                        <div class="card">
+
+                            <img class="card-img-top" src="images/car1_news.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">تويوتا كامري هايبرد 2018</h5>
+                                <p class="card-text"> تعتبر السيارة تويوتا بريوس 2018 احدى السيارات السيد بين البنزين و
+                                    2017، </p>
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                    03 Oct 2018 </div>
+                                <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div>
+                        <div class="card">
+
+                            <img class="card-img-top" src="images/car1_news.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">تويوتا كامري هايبرد 2018</h5>
+                                <p class="card-text"> تعتبر السيارة تويوتا بريوس 2018 احدى السيارات السيد بين البنزين و
+                                    2017، </p>
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                    03 Oct 2018 </div>
+                                <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div>
+                        <div class="card">
+
+                            <img class="card-img-top" src="images/car1_news.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">تويوتا كامري هايبرد 2018</h5>
+                                <p class="card-text"> تعتبر السيارة تويوتا بريوس 2018 احدى السيارات السيد بين البنزين و
+                                    2017، </p>
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                    03 Oct 2018 </div>
+                                <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div>
+                        <div class="card">
+
+                            <img class="card-img-top" src="images/car1_news.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">تويوتا كامري هايبرد 2018</h5>
+                                <p class="card-text"> تعتبر السيارة تويوتا بريوس 2018 احدى السيارات السيد بين البنزين و
+                                    2017، </p>
+
+                                <div class="date"><i class="fa fa-calendar" aria-hidden="true"></i>
+                                    03 Oct 2018 </div>
+                                <a href="#" class="arrow btn btn-link"><i class="fa fa-long-arrow-left"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <nav class="footer header navbar navbar-expand-lg navbar-light bg-light">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav1"
+                    aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav1">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active"><a href="" class="nav-link ">الرئيسية</a></li>
+                        <li class="nav-item "><a href="" class="nav-link">أخبار السيارات</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">أسعار السيارات</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">العناية بالسيارة</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">صور السيارات</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">مراجعات وتجارب السيارات</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">سوق السيارات</a></li>
+                    </ul>
+                </div>
+                <a href="index.html" class="navbar-brand">
+                    <svg class="logo d-inline-block align-top" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="131" height="54" viewBox="0 0 131 54">
+                        <image id="Vector_Smart_Object" data-name="Vector Smart Object" width="131" height="54"
+                            xlink:href="data:img/png;base64,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" />
+                    </svg>
+                </a>
+            </nav>
+        </footer>
+    </div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/app.js"></script>
+
+</html>
